@@ -20,10 +20,6 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.rofi = {
-      theme = {
-        "@theme" = "${sources.rofi}/catppuccin-${cfg.flavor}.rasi";
-      };
-    };
+    programs.rofi.theme = "${sources.rofi}/catppuccin-${cfg.flavor}.rasi";
   };
 }
